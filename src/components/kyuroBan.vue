@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import kyuroCell from "./kyuroCell.vue";
 import { useGameStore } from "@/stores/game";
+import { playoutRun } from "@/logic/playout";
 
 const game = useGameStore();
 
@@ -11,6 +12,9 @@ const game = useGameStore();
 // const redraw = (): void => {
 //   // console.log("Update");
 // };
+const Run = (): void => {
+  playoutRun();
+};
 const start = (): void => {
   game.start();
 
@@ -31,6 +35,7 @@ const start = (): void => {
     </div>
   </div>
   <button id="start" @click="start">初期化</button>
+  <button id="run" @click="Run">プレイアウト</button>
 </template>
 
 <style lang="scss" scoped>
