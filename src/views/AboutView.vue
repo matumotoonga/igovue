@@ -1,6 +1,17 @@
+<script setup lang="ts">
+import { countDame } from "@/logics/move";
+
+
+const test = () => {
+  const p = countDame(25);
+  console.log("dame=%d ishi=%d", p.dame, p.ishi);
+};
+</script>
+
 <template>
   <div class="about">
     <h1>This is an about page</h1>
+    <button id="test" @click="test">TEST</button><br />
   </div>
 </template>
 

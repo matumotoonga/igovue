@@ -1,18 +1,24 @@
 <script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
+import { RouterLink, RouterView } from "vue-router";
+import HelloWorld from "./components/HelloWorld.vue";
 </script>
 
 <template>
   <header>
-    <img src="@/assets/logo.svg" class="logo" alt="Vue logo"  width="50" height="50" />
-    <img src="/vite.svg" class="logo" alt="Vite logo" width="50" height="50" />
-    <img src="/electron.svg" class="logo electron" alt="Electron logo" width="50" height="50"  />
+    <img
+      alt="Vue logo"
+      class="logo"
+      src="@/assets/logo.svg"
+      width="125"
+      height="125"
+    />
+
     <div class="wrapper">
-      <HelloWorld msg="vue3.2 + vite3 + electron21" />
+      <HelloWorld msg="九路盤研究ノート" />
 
       <nav>
         <RouterLink to="/">Home</RouterLink>
+        <RouterLink to="/game">Game</RouterLink>
         <RouterLink to="/about">About</RouterLink>
       </nav>
     </div>
