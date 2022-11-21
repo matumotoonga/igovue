@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { placeStone } from "@/logics/placeStone";
-import { move, countDame, takeStone } from "@/logics/move";
+import { placeStone } from "@/logic/placeStone";
+import { move, countDame, takeStone } from "@/logic/move";
 import { useGameStore } from "@/stores/game";
 
 const props = defineProps<{

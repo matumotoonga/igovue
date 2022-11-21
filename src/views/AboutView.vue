@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { countDame } from "@/logics/move";
+import { countDame } from "@/logic/move;
 
 
 const test = () => {
