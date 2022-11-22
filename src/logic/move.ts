@@ -1,37 +1,14 @@
 import { useGameStore } from "@/stores/game";
+import { pMax } from "@/logic/playout";
 export type TL = { liberty: number; stone: number };
 export const dir4 = [1, -11, -1, 11];
 
 const game = useGameStore();
-const checkBoard = Array(122);
-const p: TL = { liberty: 0, stone: 0 };
+const checkBoard = Array(pMax);
 
 export const flipColor = (color: number): number => {
   return 3 - color;
 };
-// const countDameSub = (tz: number, color: number): void => {
-//   checkBoard[tz] = 1;
-//   p.ishi++;
-//   for (let i = 0; i < 4; i++) {
-//     const z = tz + dir4[i];
-//     if (checkBoard[z] == 1) continue;
-//     if (game.board[z] == 0) {
-//       checkBoard[z] = 1;
-//       p.dame++;
-//     }
-//     if (game.board[z] == color) countDameSub(z, color);
-//   }
-// };
-// export const countDame = (tz: number): TP => {
-//   checkBoard.fill(0);
-//   p.dame = 0;
-//   p.ishi = 0;
-//   countDameSub(tz, game.board[tz]);
-//   return p;
-// };
-//
-// 命名を電通大サンプルにあわせる。
-//
 const countLibertySub = (tz: number, color: number, p: TL): void => {
   p.stone++;
   checkBoard[tz] = 1;

@@ -7,7 +7,6 @@ export const useGameStore = defineStore("game", () => {
   const tekazu = ref(0);
   const kifu = ref([]);
   const koZ = ref(0); // コウで打てない位置
-  const allPlayout = ref(0);
 
   const arr = [
     [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3],
@@ -40,5 +39,5 @@ export const useGameStore = defineStore("game", () => {
     kifu.value.length = 0;
     board.value.splice(0, arr2.length, ...arr);
   };
-  return { komi, teban, tekazu, kifu, koZ, allPlayout, board, utu, start };
+  return { komi, teban, tekazu, kifu, koZ, board, utu, start };
 });

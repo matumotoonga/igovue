@@ -5,15 +5,11 @@ import { flipColor, dir4, move } from "@/logic/move";
 const game = useGameStore();
 const playout = usePlayoutStore();
 
-const pMin: number = 13;
-const pMax: number = 110;
+export const pMin: number = 13;
+export const pMax: number = 110;
 const loopMax: number = 360;
 let z: number = 0;
 let r: number = 0;
-
-// const flipColor = (color: number): number => {
-//   return 3 - color;
-// };
 
 const countScore = (): number => {
   let black: number = 0;
