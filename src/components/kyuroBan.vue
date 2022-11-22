@@ -5,13 +5,6 @@ import { playoutRun } from "@/logic/playout";
 
 const game = useGameStore();
 
-// const flip_color = (color: number): number => {
-//   return 3 - color;
-// };
-
-// const redraw = (): void => {
-//   // console.log("Update");
-// };
 const Run = (): void => {
   playoutRun();
 };
@@ -36,8 +29,9 @@ const start = (): void => {
   </div>
   <button id="start" @click="start">初期化</button>
   <button id="run" @click="Run">プレイアウト</button><br />
-  棋譜
-  <div class="kifu">{{ game.kifu.join() }}</div>
+  <div></div>
+  
+  棋譜 <div class="kifu">{{ game.kifu.join() }}</div>
 </template>
 
 <style lang="scss" scoped>

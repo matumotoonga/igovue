@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { placeStone } from "@/logic/placeStone";
-import { move, countDame, takeStone } from "@/logic/move";
+import { move, takeStone, countLiberty } from "@/logic/move";
 import { useGameStore } from "@/stores/game";
 
 const props = defineProps<{
@@ -16,8 +16,8 @@ const clickCell = () => {
   if (status == 0) {
     move(no);
   } else {
-    const p = countDame(no);
-    console.log("tz=%d dame=%d ishi=%d", no, p.dame, p.ishi);
+    const p = countLiberty(no);
+    console.log("tz=%d librtyy=%d stone=%d", no, p.liberty, p.stone);
   }
 };
 
