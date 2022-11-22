@@ -5,13 +5,13 @@ import HelloWorld from "./components/HelloWorld.vue";
 
 <template>
   <header>
-    <img
+    <!-- <img
       alt="Vue logo"
       class="logo"
       src="@/assets/logo.svg"
-      width="125"
-      height="125"
-    />
+      width="25"
+      height="25"
+    /> -->
 
     <div class="wrapper">
       <HelloWorld msg="九路盤研究ノート" />

@@ -1,5 +1,5 @@
 import { useGameStore } from "@/stores/game";
-import { usePlayoutStore } from "@/stores/playout"
+import { usePlayoutStore } from "@/stores/playout";
 import { move } from "@/logic/move";
 
 const game = useGameStore();
@@ -13,6 +13,13 @@ let r: number = 0;
 const flipColor = (color: number): number => {
   return 3 - color;
 };
+
+const countScore = (color: number): number => {
+  const score: number = 0;
+
+  return 0;
+};
+
 export const playoutRun = (): number => {
   playout.allPlayout++;
   const turnColor = game.teban;

@@ -25,7 +25,7 @@ const start = (): void => {
 <template>
   <div>
     九路盤 手数:{{ game.tekazu }} 手番: {{ game.teban }} <br />
-    棋譜:{{ game.kifu.join() }} <br />
+
     <div class="GameBoard">
       <div class="board">
         <div class="cell" v-for="cellNo in 121" :key="cellNo">
@@ -35,7 +35,9 @@ const start = (): void => {
     </div>
   </div>
   <button id="start" @click="start">初期化</button>
-  <button id="run" @click="Run">プレイアウト</button>
+  <button id="run" @click="Run">プレイアウト</button><br />
+  棋譜
+  <div class="kifu">{{ game.kifu.join() }}</div>
 </template>
 
 <style lang="scss" scoped>
@@ -49,5 +51,9 @@ const start = (): void => {
     grid-template-rows: 1px 60px 60px 60px 60px 60px 60px 60px 60px 60px 3px;
     gap: 1px;
   }
+}
+.kifu {
+  width: 200px;
+  overflow-wrap: normal;
 }
 </style>
