@@ -1,6 +1,7 @@
 import { useGameStore } from "@/stores/game";
 import { usePlayoutStore } from "@/stores/playout";
-import { flipColor, dir4, move } from "@/logic/move";
+import { flipColor } from "@/logic/common";
+import { dir4, move } from "@/logic/move";
 
 const game = useGameStore();
 const playout = usePlayoutStore();

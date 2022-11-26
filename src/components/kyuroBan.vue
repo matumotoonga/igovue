@@ -30,8 +30,9 @@ const start = (): void => {
   <button id="start" @click="start">初期化</button>
   <button id="run" @click="Run">プレイアウト</button><br />
   <div></div>
-  
-  棋譜 <div class="kifu">{{ game.kifu.join() }}</div>
+
+  棋譜
+  <div class="kifu">{{ game.kifu.join() }}</div>
 </template>
 
 <style lang="scss" scoped>

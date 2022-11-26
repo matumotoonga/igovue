@@ -1,14 +1,13 @@
 import { useGameStore } from "@/stores/game";
 import { pMax } from "@/logic/playout";
-export type TL = { liberty: number; stone: number };
-export const dir4 = [1, -11, -1, 11];
+import { flipColor } from "@/logic/common";
 
 const game = useGameStore();
 const checkBoard = Array(pMax);
 
-export const flipColor = (color: number): number => {
-  return 3 - color;
-};
+export type TL = { liberty: number; stone: number };
+export const dir4 = [1, -11, -1, 11];
+
 const countLibertySub = (tz: number, color: number, p: TL): void => {
   p.stone++;
   checkBoard[tz] = 1;
@@ -39,8 +38,8 @@ export const move = (tz: number): number => {
     return 0;
   }
 
-  const unCol = flipColor(color);
-  let space = 0;
+  const unCol: number = flipColor(color);
+  let space: number = 0;
   let kabe = 0;
   let mikataSafe = 0;
   let takeSum = 0;
