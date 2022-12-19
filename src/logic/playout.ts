@@ -1,13 +1,11 @@
 import { useGameStore } from "@/stores/game";
 import { usePlayoutStore } from "@/stores/playout";
-import { flipColor } from "@/logic/common";
-import { dir4, move } from "@/logic/move";
+import { pMin, pMax, dir4, flipColor } from "@/logic/common";
+import { move } from "@/logic/move";
 
 const game = useGameStore();
 const playout = usePlayoutStore();
 
-export const pMin: number = 13;
-export const pMax: number = 110;
 const loopMax: number = 360;
 let z: number = 0;
 let r: number = 0;

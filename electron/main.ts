@@ -5,7 +5,7 @@ const isDevelopment = ("" + process.env.NODE_ENV).trim() === "development";
 
 function createWindow() {
   const win = new BrowserWindow({
-    width: 1600,
+    width: 1000,
     height: 1000,
     webPreferences: {
       preload: path.join(__dirname, "preload.js"),

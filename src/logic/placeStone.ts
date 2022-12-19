@@ -1,12 +1,14 @@
 import { useGameStore } from "@/stores/game";
+import { pMin, pMax } from "@/logic/common";
+
 const game = useGameStore();
 
-export const placeStone = (no: Number): String => {
-  if (no == 1 || no > 109 || no < 11 || no % 11 == 0 || no % 11 == 1) return "";
+export const placeStone = (no: number): string => {
+  if (no < pMin || no >= pMax || no % 11 == 0 || no % 11 == 1) return "";
 
-  const status = game.board[no];
+  const color = game.board[no];
 
-  if (status == 1) return "\u26AB";
-  if (status == 2) return "\u26AA";
+  if (color == 1) return "\u26AB";
+  if (color == 2) return "\u26AA";
   return "";
 };

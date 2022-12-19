@@ -48,7 +48,9 @@ const start = (): void => {
   }
 }
 .kifu {
-  width: 200px;
-  overflow-wrap: normal;
+  width: 565px;
+  height: 150px;
+  border: 1px solid gray;
+  overflow-wrap: break-word;
 }
 </style>
